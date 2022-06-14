@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 {
     'name' : 'test sen button',
-    'version': '0.1',
+    'version': '15.0.0.1',
     'summary': 'Module customization',
     'category': 'Custom Development',
     'author': 'Odoo Inc',
