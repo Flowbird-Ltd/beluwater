@@ -15,6 +15,9 @@ class res_partner(models.Model):
         'Indirect Surbordinates Count',
         compute='_compute_subordinates', store=False,
         compute_sudo=True)
+    subordinate_ids = fields.One2many('res.partner', 'parent_id', string='Subordinates',
+                                      domain=[('active', '=', True)],
+                                      compute_sudo=True, compute='_compute_subordinates')
 
     def _get_subordinates(self, parents=None):
         """
@@ -38,8 +41,5 @@ class res_partner(models.Model):
             partner.subordinate_ids = partner._get_subordinates()
             partner.child_all_count = len(partner.subordinate_ids)
 
-    subordinate_ids = fields.One2many('res.partner', 'parent_id', string='Subordinates',
-                                      domain=[('active', '=', True)],
-                                      compute_sudo=True, compute='_compute_subordinates')
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

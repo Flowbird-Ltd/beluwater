@@ -41,7 +41,7 @@
                                             <div
                                                 t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
                                                 <div class="o_kanban_image">
-                                                    <img alt="" t-if="record.image_128.raw_value"
+                                                    <img alt="Partner Image" t-if="record.image_128.raw_value"
                                                         t-att-src="kanban_image('res.partner', 'image_128', record.id.raw_value)" />
                                                     <t t-if="!record.image_128.raw_value">
                                                         <img alt="Delivery"
