@@ -6,7 +6,7 @@
 ##############################################################################
 
 {
-    'name': "Partner Org Chart",
+    'name': "Partner Org Chart ",
     'version': '13.0.1.0',
     'category': 'Tools',
     'author': 'Equick ERP',
