@@ -56,8 +56,8 @@ class mail_message(models.Model):
 class Followers(models.Model):
     _inherit = 'mail.followers'
 
-    def _get_recipient_data(self, records, message_type, subtype_id, pids=None, cids=None):
+    def _get_recipient_data(self, records, message_type, subtype_id, pids=None):
         if self.env.context.get('from_crm_auto_not_send_mail'):
             subtype_id = False
-        res = super(Followers, self)._get_recipient_data(records=records, message_type=message_type, subtype_id=subtype_id, pids=pids, cids=cids)
+        res = super(Followers, self)._get_recipient_data(records=records, message_type=message_type, subtype_id=subtype_id, pids=pids)
         return res

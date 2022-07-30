@@ -7,9 +7,9 @@
 
 {
     'name': "Partner Org Chart ",
-    'version': '13.0.1.0',
-    'category': 'Tools',
-    'author': 'Equick ERP',
+    'version': '15.0.1.0',
+    'category': 'Tools ',
+    'author': '',
     'summary': """Organization Chart for Contact""" ,
     'description': """
         Org Chart Widget for Partner/Contact
@@ -23,13 +23,22 @@
     'currency': 'EUR',
     'website': "",
     'data': [
-        'views/template.xml',
+        # 'views/template.xml',
         'views/res_partner_view.xml'
     ],
     'images': ['static/description/main_screenshot.png'],
-    'qweb': [
-        'static/src/xml/partner_chart.xml',
-    ],
+    'assets': {
+        'web._assets_primary_variables': [
+            'eq_partner_org_chart/static/src/scss/variables.scss',
+        ],
+        'web.assets_backend': [
+            'eq_partner_org_chart/static/src/scss/org_chart.scss',
+            'eq_partner_org_chart/static/src/js/partner_chart.js',
+        ],
+        'web.assets_qweb': [
+            'eq_partner_org_chart/static/src/xml/partner_chart.xml',
+        ],
+    },
     'installable': True,
     'auto_install': False,
     'application': False,
